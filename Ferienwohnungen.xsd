@@ -1,0 +1,31 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/Quatsch"
+           xmlns:Adresse="http://example.com/Quatsch">
+    <xs:include schemaLocation="Adresse.xsd"/>
+    <xs:complexType name="Ferienwohnungen">
+        <xs:sequence>
+            <xs:element name="Ferienwohnung" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Name" type="xs:string"/>
+                        <xs:element name="Preis" type="xs:decimal"/>
+                        <xs:element name="Größe" type="xs:int"/>
+                        <xs:element name="ZimmerAnzahl" type="xs:int"/>
+                        <xs:element name="Bild" type="xs:string"/>
+                        <xs:element name="Beschreibung" type="xs:string"/>
+                        <xs:element name="Adresse" type="Adresse:Adresse">
+                        </xs:element>
+                        <xs:element name="Zusatzaustattung" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="Austattung" maxOccurs="unbounded"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
