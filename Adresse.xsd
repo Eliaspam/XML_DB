@@ -9,4 +9,5 @@
             <xs:element name="Straße" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
+
 </xs:schema>

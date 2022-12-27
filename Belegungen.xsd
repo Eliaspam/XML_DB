@@ -1,0 +1,40 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/Quatsch">
+    <xs:complexType name="Belegungen">
+        <xs:sequence>
+            <xs:element name="Belegung" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element type="xs:string" name="ID"/>
+                        <xs:element type="xs:int"  name="KundenNr"/>
+                        <xs:element type="xs:int"  name="WohnungsNr"/>
+                        <xs:element type="xs:date" name="von"/>
+                        <xs:element type="xs:date" name="bis"/>
+                        <xs:element type="xs:date" name="Belegungsdatum"/>
+                    </xs:sequence>
+                <xs:attribute name="Art" use="required">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:token">
+                            <xs:enumeration value="Rechnung"/>
+                            <xs:enumeration value="Belegung"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+                </xs:complexType>
+                <xs:key name="BelegungsNr">
+                    <xs:selector xpath="Belegung"/>
+                    <xs:field xpath="ID"/>
+                </xs:key>
+                <xs:keyref name="KundenNr" refer="KundenNr">
+                    <xs:selector xpath="Kunde"/>
+                    <xs:field xpath="KundenNr"/>
+                </xs:keyref>
+                <xs:keyref name="WohnungsNr" refer="WohnungNr">
+                    <xs:selector xpath="Ferienwohnung"/>
+                    <xs:field xpath="WohnungsNr"/>
+                </xs:keyref>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,27 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/Quatsch">
+    <xs:complexType name="Rechnungen">
+       <xs:sequence>
+        <xs:element name="Rechnung" maxOccurs="unbounded">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="ID" type="xs:int"/>
+                    <xs:element name="BelegungsNr" type="xs:int"/>
+                    <xs:element name="Betrag" type="xs:decimal"/>
+                    <xs:element name="Belegungsdatum" type="xs:date"/>
+                    <xs:element name="Zahlungseingang" type="xs:date" minOccurs="0"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:key name="RechnungsNr">
+                <xs:selector xpath="Rechnung"/>
+                <xs:field xpath="ID"/>
+            </xs:key>
+            <xs:keyref name="BelegungsNr" refer="BelegungsNr">
+                <xs:selector xpath="Rechnung"/>
+                <xs:field xpath="BelegungsNr"/>
+            </xs:keyref>
+       </xs:element>
+       </xs:sequence>
+   </xs:complexType>
+</xs:schema>

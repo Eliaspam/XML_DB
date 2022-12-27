@@ -2,20 +2,25 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:Kunden="http://example.com/Quatsch"
            xmlns:FEWO="http://example.com/Quatsch"
+           xmlns:Belegungen="http://example.com/Quatsch"
+           xmlns:Länder="http://example.com/Quatsch"
+           xmlns:Rechnungen="http://example.com/Quatsch"
            targetNamespace="http://example.com/Quatsch">
     <xs:include schemaLocation="Kunden.xsd"/>
     <xs:include schemaLocation="Ferienwohnungen.xsd"/>
+    <xs:include schemaLocation="Belegungen.xsd"/>
+    <xs:include schemaLocation="Länder.xsd"/>
+    <xs:include schemaLocation="Rechnung.xsd"/>
 
     <xs:element name="Ferienwohnungsvermittlungsagentur">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="Kunden" type="Kunden:Kunden"/>
                 <xs:element name="Ferienwohnungen" type="FEWO:Ferienwohnungen"/>
+                <xs:element name="Belegungen" type="Belegungen:Belegungen"/>
+                <xs:element name="Rechnungen" type="Rechnungen:Rechnungen"/>
+                <xs:element name="Länder" type="Länder:Länder"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-
-
 </xs:schema>
-
-
