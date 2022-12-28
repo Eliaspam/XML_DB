@@ -1,13 +1,16 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
-<Ferienwohnungsvermittlungsagentur
+<Qua:Ferienwohnungsvermittlungsagentur
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://example.com/Quatsch Full.xsd"
-        xmlns="http://example.com/Quatsch">
+        xmlns:Qua="http://example.com/Quatsch">
+
+    <!-- TODO: Think about container named Stammdaten -->
     <Kunden>
         <Kunde ID="1">
             <Name>Karl</Name>
             <Vorname>Napf</Vorname>
+            <Geburtsdatum>1960-01-01</Geburtsdatum>
             <Adresse>
                 <Land>Deutschland</Land>
                 <Ort>Konstanz</Ort>
@@ -26,6 +29,7 @@
         <Kunde ID="2">
             <Name>Meier</Name>
             <Vorname>Hans</Vorname>
+            <Geburtsdatum>1975-01-02</Geburtsdatum>
             <Adresse>
                 <Land>Deutschland</Land>
                 <Ort>Heidelberg</Ort>
@@ -41,6 +45,82 @@
                 <BIC>BARSDE77XXX</BIC>
             </Bankverbindung>
         </Kunde>
+        <Kunde ID="3">
+            <Name>Huber</Name>
+            <Vorname>Franz</Vorname>
+            <Geburtsdatum>1980-01-03</Geburtsdatum>
+            <Adresse>
+                <Land>Deutschland</Land>
+                <Ort>Stuttgart</Ort>
+                <PLZ>70713</PLZ>
+                <Straße>Schlossstraße 54</Straße>
+            </Adresse>
+            <Email>huber@t-online.de</Email>
+            <Telefon>0711-554673</Telefon>
+            <Bankverbindung>
+                <IBAN>DE85692717230001347291</IBAN>
+                <Kontonummer>1347291</Kontonummer>
+                <Bankleitzahl>69271723</Bankleitzahl>
+                <BIC>KARSDE66XXX</BIC>
+            </Bankverbindung>
+        </Kunde>
+        <Kunde ID="4">
+            <Name>Eber</Name>
+            <Vorname>Klaus</Vorname>
+            <Geburtsdatum>1985-01-06</Geburtsdatum>
+            <Adresse>
+                <Land>Schweiz</Land>
+                <Ort>Bern</Ort>
+                <PLZ>3001</PLZ>
+                <Straße>Alpenstraße 11</Straße>
+            </Adresse>
+            <Email>eber@bluewin.ch</Email>
+            <Telefon>+41-171-9864785</Telefon>
+            <Bankverbindung>
+                <IBAN>CH85692717230008792978</IBAN>
+                <Kontonummer>8792978</Kontonummer>
+                <Bankleitzahl>29788431</Bankleitzahl>
+                <BIC>MEMECH88XXX</BIC>
+            </Bankverbindung>
+        </Kunde>
+        <Kunde ID="5">
+            <Name>Meier</Name>
+            <Vorname>Egon</Vorname>
+            <Geburtsdatum>1990-01-05</Geburtsdatum>
+            <Adresse>
+                <Land>Schweiz</Land>
+                <Ort>Zürich</Ort>
+                <PLZ>8001</PLZ>
+                <Straße>Seeweg 23</Straße>
+            </Adresse>
+            <Email>meier@gmail.com</Email>
+            <Telefon>+41-171-9864786</Telefon>
+            <Bankverbindung>
+                <IBAN>CH85692717230009082780</IBAN>
+                <Kontonummer>9082780</Kontonummer>
+                <Bankleitzahl>87890271</Bankleitzahl>
+                <BIC>KONSCH12XXX</BIC>
+            </Bankverbindung>
+        </Kunde>
+        <Kunde ID="6">
+            <Name>Knopf</Name>
+            <Vorname>Jim</Vorname>
+            <Geburtsdatum>1995-01-06</Geburtsdatum>
+            <Adresse>
+                <Land>Deutschland</Land>
+                <Ort>Konstanz</Ort>
+                <PLZ>78462</PLZ>
+                <Straße>Rheingutstraße 14</Straße>
+            </Adresse>
+            <Email>jim.knopf@gmx.net</Email>
+            <Telefon>0171-9876543</Telefon>
+            <Bankverbindung>
+                <IBAN>DE85692717230007322890</IBAN>
+                <Kontonummer>7322890</Kontonummer>
+                <Bankleitzahl>69271723</Bankleitzahl>
+                <BIC>KARSDE66XXX</BIC>
+            </Bankverbindung>
+        </Kunde>
     </Kunden>
     <Ferienwohnungen>
         <Wohnung ID="1">
@@ -48,28 +128,281 @@
             <Größe>200</Größe>
             <ZimmerAnzahl>6</ZimmerAnzahl>
             <Bilder>
-                <Bild>1_1.jpg, Aussenansicht</Bild>
-                <Bild>1_2.jpg, Innenansicht</Bild>
+                <Bild>
+                    <Pfad>1_2.jpg</Pfad>
+                    <Titel>Innenansicht</Titel></Bild>
+                <Bild>
+                    <Pfad>1_1.jpg</Pfad>
+                    <Titel>Aussenansicht</Titel>
+                </Bild>
             </Bilder>
             <Beschreibung>Finka</Beschreibung>
             <Adresse>
-                <Land>Türkei</Land>
+                <Land>TR</Land>
                 <Ort>Öludeniz</Ort>
                 <PLZ>2349</PLZ>
                 <Straße>Highway 5</Straße>
             </Adresse>
+            <Zusatzaustattung>
+                <Austattung>Schwimmbad</Austattung>
+                <Austattung>Sauna</Austattung>
+            </Zusatzaustattung>
+        </Wohnung>
+        <Wohnung ID="2">
+            <Preis>120</Preis>
+            <Größe>45</Größe>
+            <ZimmerAnzahl>2</ZimmerAnzahl>
+            <Bilder>
+                <Bild>
+                    <Pfad>2_1.jpg</Pfad>
+                    <Titel>Aussenansicht</Titel>
+                </Bild>
+                <Bild>
+                    <Pfad>2_2.jpg</Pfad>
+                    <Titel>Innenansicht</Titel>
+                </Bild>
+            </Bilder>
+            <Beschreibung>Ferienwohnung mit Seeblick</Beschreibung>
+            <Adresse>
+                <Land>Deutschland</Land>
+                <Ort>Konstanz</Ort>
+                <PLZ>78461</PLZ>
+                <Straße>Markgrafenstraße 33</Straße>
+            </Adresse>
+        </Wohnung>
+        <Wohnung ID="3">
+            <Preis>249</Preis>
+            <Größe>150</Größe>
+            <ZimmerAnzahl>3</ZimmerAnzahl>
+            <Beschreibung>im Schnee</Beschreibung>
+            <Adresse>
+                <Land>Schweiz</Land>
+                <Ort>Chur</Ort>
+                <PLZ>2234</PLZ>
+                <Straße>Zur Piste 189</Straße>
+            </Adresse>
+            <Zusatzaustattung>
+                <Austattung>Sauna</Austattung>
+            </Zusatzaustattung>
+        </Wohnung>
+        <Wohnung ID="4">
+            <Preis>249</Preis>
+            <Größe>100</Größe>
+            <ZimmerAnzahl>4</ZimmerAnzahl>
+            <Beschreibung>direkt am Meer</Beschreibung>
+            <Adresse>
+                <Land>Frankreich</Land>
+                <Ort>Bordeaux</Ort>
+                <PLZ>8234</PLZ>
+                <Straße>rue Monsieur 980</Straße>
+            </Adresse>
+        </Wohnung>
+        <Wohnung ID="5">
+            <Preis>289</Preis>
+            <Größe>110</Größe>
+            <ZimmerAnzahl>3</ZimmerAnzahl>
+            <Beschreibung>direkt am Park</Beschreibung>
+            <Adresse>
+                <Land>Frankreich</Land>
+                <Ort>Disneyland</Ort>
+                <PLZ>8787</PLZ>
+                <Straße>rue de gaulle 22</Straße>
+            </Adresse>
+            <Bilder>
+                <Bild>
+                    <Pfad>5_1.gif</Pfad>
+                    <Titel>Garage</Titel>
+                </Bild>
+            </Bilder>
+            <Zusatzaustattung>
+                <Austattung>Kinderbetreuung</Austattung>
+                <Austattung>Schwimmbad</Austattung>
+            </Zusatzaustattung>
+        </Wohnung>
+        <Wohnung ID="6">
+            <Preis>549</Preis>
+            <Größe>70</Größe>
+            <ZimmerAnzahl>2</ZimmerAnzahl>
+            <Beschreibung>mit Blick auf Eiffelturm</Beschreibung>
+            <Adresse>
+                <Land>Frankreich</Land>
+                <Ort>Paris</Ort>
+                <PLZ>8792</PLZ>
+                <Straße>rue de la Maison Blanche 32</Straße>
+            </Adresse>
+            <Zusatzaustattung>
+                <Austattung>Schwimmbad</Austattung>
+            </Zusatzaustattung>
+        </Wohnung>
+        <Wohnung ID="7">
+            <Preis>159</Preis>
+            <Größe>110</Größe>
+            <ZimmerAnzahl>6</ZimmerAnzahl>
+            <Beschreibung>Dachterrassewohnung zentral</Beschreibung>
+            <Adresse>
+                <Land>Frankreich</Land>
+                <Ort>Paris</Ort>
+                <PLZ>8792</PLZ>
+                <Straße>rue liberte 78</Straße>
+            </Adresse>
+        </Wohnung>
+        <Wohnung ID="8">
+            <Preis>249</Preis>
+            <Größe>200</Größe>
+            <ZimmerAnzahl>12</ZimmerAnzahl>
+            <Beschreibung>zweigeschoessiges Haus</Beschreibung>
+            <Adresse>
+                <Land>Türkei</Land>
+                <Ort>Antalya</Ort>
+                <PLZ>2321</PLZ>
+                <Straße>Strandweg 90</Straße>
+            </Adresse>
+            <Bilder>
+                <Bild>
+                    <Pfad>8.jpg</Pfad>
+                    <Titel>Dachterrasse</Titel>
+                </Bild>
+            </Bilder>
+            <Zusatzaustattung>
+                <Austattung>Sat-TV</Austattung>
+                <Austattung>Reinigung</Austattung>
+                <Austattung>Dachterrasse</Austattung>
+            </Zusatzaustattung>
+        </Wohnung>
+        <Wohnung ID="9">
+            <Preis>159</Preis>
+            <Größe>111</Größe>
+            <ZimmerAnzahl>5</ZimmerAnzahl>
+            <Beschreibung>Topvilla am Strand</Beschreibung>
+            <Adresse>
+                <Land>Türkei</Land>
+                <Ort>Antalya</Ort>
+                <PLZ>2321</PLZ>
+                <Straße>Strandweg 91</Straße>
+            </Adresse>
+            <Zusatzaustattung>
+                <Austattung>Garage</Austattung>
+                <Austattung>Schwimmbad</Austattung>
+            </Zusatzaustattung>
+        </Wohnung>
+        <Wohnung ID="10">
+            <Preis>299</Preis>
+            <Größe>100</Größe>
+            <ZimmerAnzahl>4</ZimmerAnzahl>
+            <Beschreibung>Ferienhaus am Strand</Beschreibung>
+            <Adresse>
+                <Land>Barcelona</Land>
+                <Ort>Spanien</Ort>
+                <PLZ>5221</PLZ>
+                <Straße>Calle del torro 821</Straße>
+            </Adresse>
+        </Wohnung>
+        <Wohnung ID="11">
+            <Preis>150</Preis>
+            <Größe>100</Größe>
+            <ZimmerAnzahl>4</ZimmerAnzahl>
+            <Beschreibung>Strandbungalow</Beschreibung>
+            <Adresse>
+                <Land>Türkei</Land>
+                <Ort>Antalya</Ort>
+                <PLZ>2321</PLZ>
+                <Straße>Strandweg 45</Straße>
+            </Adresse>
+            <Zusatzaustattung>
+                <Austattung>Schwimmbad</Austattung>
+            </Zusatzaustattung>
         </Wohnung>
     </Ferienwohnungen>
-    <Belegungen></Belegungen>
-    <Rechnungen></Rechnungen>
+    <Belegungen>
+        <Belegung Art="Buchungen" ID="1">
+            <KundenNr>4</KundenNr>
+            <WohnungsNr>2</WohnungsNr>
+            <von>2016-03-11</von>
+            <bis>2016-05-11</bis>
+            <Belegungsdatum>2016-02-12</Belegungsdatum>
+        </Belegung>
+        <Belegung Art="Reservierung" ID="2">
+            <KundenNr>2</KundenNr>
+            <WohnungsNr>4</WohnungsNr>
+            <von>2016-05-11</von>
+            <bis>2016-05-17</bis>
+            <Belegungsdatum>2016-03-02</Belegungsdatum>
+        </Belegung>
+        <Belegung Art="Reservierung" ID="3">
+            <KundenNr>3</KundenNr>
+            <WohnungsNr>5</WohnungsNr>
+            <von>2016-04-03</von>
+            <bis>2016-04-23</bis>
+            <Belegungsdatum>2016-02-10</Belegungsdatum>
+        </Belegung>
+        <Belegung Art="Buchungen" ID="4">
+            <KundenNr>4</KundenNr>
+            <WohnungsNr>6</WohnungsNr>
+            <von>2016-07-04</von>
+            <bis>2016-07-05</bis>
+            <Belegungsdatum>2016-02-09</Belegungsdatum>
+        </Belegung>
+        <Belegung Art="Reservierung" ID="5">
+            <KundenNr>2</KundenNr>
+            <WohnungsNr>10</WohnungsNr>
+            <von>2016-04-28</von>
+            <bis>2016-05-02</bis>
+            <Belegungsdatum>2016-02-14</Belegungsdatum>
+        </Belegung>
+        <Belegung Art="Buchungen" ID="6">
+            <KundenNr>3</KundenNr>
+            <WohnungsNr>8</WohnungsNr>
+            <von>2016-04-04</von>
+            <bis>2016-05-22</bis>
+            <Belegungsdatum>2016-02-18</Belegungsdatum>
+        </Belegung>
+        <Belegung Art="Buchungen" ID="7">
+            <KundenNr>1</KundenNr>
+            <WohnungsNr>2</WohnungsNr>
+            <von>2016-05-07</von>
+            <bis>2016-05-08</bis>
+            <Belegungsdatum>2016-01-02</Belegungsdatum>
+        </Belegung>
+        <Belegung Art="Buchungen" ID="8">
+            <KundenNr>5</KundenNr>
+            <WohnungsNr>9</WohnungsNr>
+            <von>2016-05-22</von>
+            <bis>2016-05-28</bis>
+            <Belegungsdatum>2016-01-02</Belegungsdatum>
+        </Belegung>
+        <Belegung Art="Buchungen" ID="9">
+            <KundenNr>5</KundenNr>
+            <WohnungsNr>10</WohnungsNr>
+            <von>2016-07-03</von>
+            <bis>2016-07-08</bis>
+            <Belegungsdatum>2016-02-07</Belegungsdatum>
+        </Belegung>
+        <Belegung Art="Reservierung" ID="10">
+            <KundenNr>4</KundenNr>
+            <WohnungsNr>1</WohnungsNr>
+            <von>2016-01-05</von>
+            <bis>2016-05-24</bis>
+            <Belegungsdatum>2016-02-10</Belegungsdatum>
+        </Belegung>
+    </Belegungen>
+    <Rechnungen>
+        <Rechnung ID="1">
+            <BelegungsNr>1</BelegungsNr>
+            <Betrag>498</Betrag>
+            <Belegungsdatum>12.02.16</Belegungsdatum>
+        </Rechnung>
+        <Rechnung ID="2">
+            <BelegungsNr>4</BelegungsNr>
+            <Betrag>549</Betrag>
+            <Belegungsdatum>09.02.16</Belegungsdatum>
+        </Rechnung>
+    </Rechnungen>
     <Länder>
-        <Land>
-            <ISO>DE</ISO>
+        <Land ISO="DE">
             <Name>Deutschland</Name>
         </Land>
-        <Land>
-            <ISO>TR</ISO>
+        <Land ISO="TR">
             <Name>Türkei</Name>
         </Land>
     </Länder>
-</Ferienwohnungsvermittlungsagentur>
+</Qua:Ferienwohnungsvermittlungsagentur>

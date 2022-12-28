@@ -6,34 +6,50 @@
     <xs:element name="Ferienwohnungsvermittlungsagentur">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Kunden" type="kundenType"></xs:element>
-                <xs:element name="Ferienwohnungen" type="wohnungenType"/>
-                <xs:element name="Belegungen" type="belegungenType"/>
-                <xs:element name="Rechnungen" type="rechnungenType"/>
-                <xs:element name="Länder" type="länderType"/>
+                <xs:element name="Kunden" type="test:Kunden">
+                    <xs:key name="KundenNr">
+                        <xs:selector xpath="Kunde"/>
+                        <xs:field xpath="@ID"/>
+                    </xs:key>
+                </xs:element>
+                <xs:element name="Ferienwohnungen" type="test:wohnungenType">
+                    <xs:key name="WohnungsNr">
+                        <xs:selector xpath="Wohnung"/>
+                        <xs:field xpath="@ID"/>
+                    </xs:key>
+                </xs:element>
+                <xs:element name="Belegungen" type="test:belegungenType">
+                    <xs:key name="BelegungsNr">
+                        <xs:selector xpath="Belegung"/>
+                        <xs:field xpath="@ID"/>
+                    </xs:key>
+                    <xs:keyref name="Kunde" refer="KundenNr">
+                        <xs:selector xpath="Belegung"/>
+                        <xs:field xpath="KundenNr"/>
+                    </xs:keyref>
+                    <xs:keyref name="Wohnung" refer="WohnungsNr">
+                        <xs:selector xpath="Belegung"/>
+                        <xs:field xpath="WohnungsNr"/>
+                    </xs:keyref>
+                </xs:element>
+                <xs:element name="Rechnungen" type="test:rechnungenType">
+                    <xs:key name="RechnungsNr">
+                        <xs:selector xpath="Rechnung"/>
+                        <xs:field xpath="@ID"/>
+                    </xs:key>
+                    <xs:keyref name="Belegung" refer="BelegungsNr">
+                        <xs:selector xpath="Rechnungen/Rechnung"/>
+                        <xs:field xpath="BelegungsNr"/>
+                    </xs:keyref>
+                </xs:element>
+                <xs:element name="Länder" type="test:länderType">
+                    <xs:key name="ISO">
+                        <xs:selector xpath="Land"/>
+                        <xs:field xpath="@ISO"/>
+                    </xs:key>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
-        <!-- Keys -->
-        <xs:key name="KundenNr">
-            <xs:selector xpath="Kunden/Kunde"/>
-            <xs:field xpath="@ID"/>
-        </xs:key>
-        <xs:key name="WohnungsNr">
-            <xs:selector xpath="Ferienwohnungen/Wohnung"/>
-            <xs:field xpath="@ID"/>
-        </xs:key>
-        <xs:key name="BelegungsNr">
-            <xs:selector xpath="Belegungen/Belegung"/>
-            <xs:field xpath="@ID"/>
-        </xs:key>
-        <xs:key name="RechnungsNr">
-            <xs:selector xpath="Rechnungen/Rechnung"/>
-            <xs:field xpath="@ID"/>
-        </xs:key>
-        <xs:key name="ISO">
-            <xs:selector xpath="Länder/Land"/>
-            <xs:field xpath="ISO"/>
-        </xs:key>
         <!-- References -->
         <xs:keyref name="Kunde" refer="KundenNr">
             <xs:selector xpath="Belegungen/Belegung"/>
@@ -53,17 +69,18 @@
     <xs:complexType name="kundenType">
         <xs:sequence>
             <!-- The Kunden Element holds unlimited 'Kunde' elements -->
-            <xs:element name="Kunde" type="kundeType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Kunde" type="test:kundeType" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="kundeType">
         <xs:sequence>
             <xs:element name="Name" type="xs:string"/>
             <xs:element name="Vorname" type="xs:string"/>
-            <xs:element name="Adresse" type="adresseType"/>
+            <xs:element name="Geburtsdatum" type="xs:date"/>
+            <xs:element name="Adresse" type="test:adresseType"/>
             <xs:element name="Email" type="xs:string"/>
             <xs:element name="Telefon" type="xs:string"/>
-            <xs:element name="Bankverbindung" type="bankverbindungType">
+            <xs:element name="Bankverbindung" type="test:bankverbindungType">
             </xs:element>
         </xs:sequence>
         <xs:attribute name="ID" type="xs:int" use="required"/>
@@ -86,7 +103,7 @@
     </xs:complexType>
     <xs:complexType name="wohnungenType">
         <xs:sequence>
-            <xs:element name="Wohnung" type="wohnungType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Wohnung" type="test:wohnungType" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="wohnungType">
@@ -94,17 +111,23 @@
             <xs:element name="Preis" type="xs:decimal"/>
             <xs:element name="Größe" type="xs:int"/>
             <xs:element name="ZimmerAnzahl" type="xs:int"/>
-            <xs:element name="Bilder" type="bildType"/>
+            <xs:element name="Bilder" type="test:bilderType" minOccurs="0"/>
             <xs:element name="Beschreibung" type="xs:string"/>
-            <xs:element name="Adresse" type="adresseType"/>
-            <xs:element name="Zusatzaustattung" type="ausstattungType" minOccurs="0">
+            <xs:element name="Adresse" type="test:adresseType"/>
+            <xs:element name="Zusatzaustattung" type="test:ausstattungType" minOccurs="0">
             </xs:element>
         </xs:sequence>
         <xs:attribute name="ID" type="xs:int" use="required"/>
     </xs:complexType>
+    <xs:complexType name="bilderType">
+        <xs:sequence>
+            <xs:element name="Bild" type="test:bildType" maxOccurs="5"/>
+        </xs:sequence>
+    </xs:complexType>
     <xs:complexType name="bildType">
         <xs:sequence>
-            <xs:element name="Bild" maxOccurs="unbounded"/>
+            <xs:element name="Pfad" type="xs:anyURI" maxOccurs="5"/>
+            <xs:element name="Titel" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="ausstattungType">
@@ -114,7 +137,7 @@
     </xs:complexType>
     <xs:complexType name="belegungenType">
         <xs:sequence>
-            <xs:element name="Belegung" type="belegungType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Belegung" type="test:belegungType" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="belegungType">
@@ -137,7 +160,7 @@
     </xs:complexType>
     <xs:complexType name="rechnungenType">
         <xs:sequence>
-            <xs:element name="Rechnung" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Rechnung" type="test:rechnungType" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="rechnungType">
@@ -151,13 +174,13 @@
     </xs:complexType>
     <xs:complexType name="länderType">
         <xs:sequence>
-            <xs:element name="Land" type="landType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Land" type="test:landType" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="landType">
         <xs:sequence>
-            <xs:element name="ISO" type="xs:string"/>
-            <xs:element name="Name"/>
+            <xs:element name="Name" type="xs:string"/>
         </xs:sequence>
+        <xs:attribute name="ISO" type="xs:string" use="required"/>
     </xs:complexType>
 </xs:schema>
