@@ -142,7 +142,7 @@
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="Reservierung"/>
-                    <xs:enumeration value="Buchungen"/>
+                    <xs:enumeration value="Buchung"/>
                 </xs:restriction>
             </xs:simpleType>
         </xs:attribute>

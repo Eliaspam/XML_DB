@@ -7,7 +7,7 @@
 
     <!-- TODO: Think about container named Stammdaten -->
     <Kunden>
-        <Kunde ID="1">å
+        <Kunde ID="1">
             <Name>Karl</Name>
             <Vorname>Napf</Vorname>
             <Geburtsdatum>1960-01-01</Geburtsdatum>
@@ -201,6 +201,12 @@
             <Preis>289</Preis>
             <Größe>110</Größe>
             <ZimmerAnzahl>3</ZimmerAnzahl>
+            <Bilder>
+                <Bild>
+                    <Pfad>5_1.gif</Pfad>
+                    <Titel>Garage</Titel>
+                </Bild>
+            </Bilder>
             <Beschreibung>direkt am Park</Beschreibung>
             <Adresse>
                 <Land>Frankreich</Land>
@@ -208,12 +214,6 @@
                 <PLZ>8787</PLZ>
                 <Straße>rue de gaulle 22</Straße>
             </Adresse>
-            <Bilder>
-                <Bild>
-                    <Pfad>5_1.gif</Pfad>
-                    <Titel>Garage</Titel>
-                </Bild>
-            </Bilder>
             <Zusatzaustattung>
                 <Austattung>Kinderbetreuung</Austattung>
                 <Austattung>Schwimmbad</Austattung>
@@ -245,11 +245,20 @@
                 <PLZ>8792</PLZ>
                 <Straße>rue liberte 78</Straße>
             </Adresse>
+            <Zusatzaustattung>
+                <Austattung>Schwimmbad</Austattung>
+            </Zusatzaustattung>
         </Wohnung>
         <Wohnung ID="8">
             <Preis>249</Preis>
             <Größe>200</Größe>
             <ZimmerAnzahl>12</ZimmerAnzahl>
+            <Bilder>
+                <Bild>
+                    <Pfad>8.jpg</Pfad>
+                    <Titel>Dachterrasse</Titel>
+                </Bild>
+            </Bilder>
             <Beschreibung>zweigeschoessiges Haus</Beschreibung>
             <Adresse>
                 <Land>Türkei</Land>
@@ -257,12 +266,6 @@
                 <PLZ>2321</PLZ>
                 <Straße>Strandweg 90</Straße>
             </Adresse>
-            <Bilder>
-                <Bild>
-                    <Pfad>8.jpg</Pfad>
-                    <Titel>Dachterrasse</Titel>
-                </Bild>
-            </Bilder>
             <Zusatzaustattung>
                 <Austattung>Sat-TV</Austattung>
                 <Austattung>Reinigung</Austattung>
@@ -314,7 +317,7 @@
         </Wohnung>
     </Ferienwohnungen>
     <Belegungen>
-        <Belegung Art="Buchungen" ID="1">
+        <Belegung Art="Buchung" ID="1">
             <KundenNr>4</KundenNr>
             <WohnungsNr>2</WohnungsNr>
             <von>2016-03-11</von>
@@ -335,7 +338,7 @@
             <bis>2016-04-23</bis>
             <Belegungsdatum>2016-02-10</Belegungsdatum>
         </Belegung>
-        <Belegung Art="Buchungen" ID="4">
+        <Belegung Art="Buchung" ID="4">
             <KundenNr>4</KundenNr>
             <WohnungsNr>6</WohnungsNr>
             <von>2016-07-04</von>
@@ -349,28 +352,28 @@
             <bis>2016-05-02</bis>
             <Belegungsdatum>2016-02-14</Belegungsdatum>
         </Belegung>
-        <Belegung Art="Buchungen" ID="6">
+        <Belegung Art="Buchung" ID="6">
             <KundenNr>3</KundenNr>
             <WohnungsNr>8</WohnungsNr>
             <von>2016-04-04</von>
             <bis>2016-05-22</bis>
             <Belegungsdatum>2016-02-18</Belegungsdatum>
         </Belegung>
-        <Belegung Art="Buchungen" ID="7">
+        <Belegung Art="Buchung" ID="7">
             <KundenNr>1</KundenNr>
             <WohnungsNr>2</WohnungsNr>
             <von>2016-05-07</von>
             <bis>2016-05-08</bis>
             <Belegungsdatum>2016-01-02</Belegungsdatum>
         </Belegung>
-        <Belegung Art="Buchungen" ID="8">
+        <Belegung Art="Buchung" ID="8">
             <KundenNr>5</KundenNr>
             <WohnungsNr>9</WohnungsNr>
             <von>2016-05-22</von>
             <bis>2016-05-28</bis>
             <Belegungsdatum>2016-01-02</Belegungsdatum>
         </Belegung>
-        <Belegung Art="Buchungen" ID="9">
+        <Belegung Art="Buchung" ID="9">
             <KundenNr>5</KundenNr>
             <WohnungsNr>10</WohnungsNr>
             <von>2016-07-03</von>
@@ -389,12 +392,12 @@
         <Rechnung ID="1">
             <BelegungsNr>1</BelegungsNr>
             <Betrag>498</Betrag>
-            <Belegungsdatum>12.02.16</Belegungsdatum>
+            <Belegungsdatum>2016-02-12</Belegungsdatum>
         </Rechnung>
         <Rechnung ID="2">
             <BelegungsNr>4</BelegungsNr>
             <Betrag>549</Betrag>
-            <Belegungsdatum>09.02.16</Belegungsdatum>
+            <Belegungsdatum>2016-09-02</Belegungsdatum>
         </Rechnung>
     </Rechnungen>
     <Länder>
