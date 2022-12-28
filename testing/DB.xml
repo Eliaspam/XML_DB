@@ -1,0 +1,75 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<Ferienwohnungsvermittlungsagentur
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://example.com/Quatsch Full.xsd"
+        xmlns="http://example.com/Quatsch">
+    <Kunden>
+        <Kunde ID="1">
+            <Name>Karl</Name>
+            <Vorname>Napf</Vorname>
+            <Adresse>
+                <Land>Deutschland</Land>
+                <Ort>Konstanz</Ort>
+                <PLZ>78467</PLZ>
+                <Straße>Reutestraße 104</Straße>
+            </Adresse>
+            <Email>knapf@gmx.de</Email>
+            <Telefon>07531-123456</Telefon>
+            <Bankverbindung>
+                <IBAN>DE85692717230007823212</IBAN>
+                <Kontonummer>7823212</Kontonummer>
+                <Bankleitzahl>69271723</Bankleitzahl>
+                <BIC>KARSDE66XXX</BIC>
+            </Bankverbindung>
+        </Kunde>
+        <Kunde ID="2">
+            <Name>Meier</Name>
+            <Vorname>Hans</Vorname>
+            <Adresse>
+                <Land>Deutschland</Land>
+                <Ort>Heidelberg</Ort>
+                <PLZ>69115</PLZ>
+                <Straße>Hauptstraße 12</Straße>
+            </Adresse>
+            <Email>meier.hans@t-online.de</Email>
+            <Telefon>06221-999888</Telefon>
+            <Bankverbindung>
+                <IBAN>DE83692717230008929368</IBAN>
+                <Kontonummer>7823212</Kontonummer>
+                <Bankleitzahl>32793968</Bankleitzahl>
+                <BIC>BARSDE77XXX</BIC>
+            </Bankverbindung>
+        </Kunde>
+    </Kunden>
+    <Ferienwohnungen>
+        <Wohnung ID="1">
+            <Preis>349</Preis>
+            <Größe>200</Größe>
+            <ZimmerAnzahl>6</ZimmerAnzahl>
+            <Bilder>
+                <Bild>1_1.jpg, Aussenansicht</Bild>
+                <Bild>1_2.jpg, Innenansicht</Bild>
+            </Bilder>
+            <Beschreibung>Finka</Beschreibung>
+            <Adresse>
+                <Land>Türkei</Land>
+                <Ort>Öludeniz</Ort>
+                <PLZ>2349</PLZ>
+                <Straße>Highway 5</Straße>
+            </Adresse>
+        </Wohnung>
+    </Ferienwohnungen>
+    <Belegungen></Belegungen>
+    <Rechnungen></Rechnungen>
+    <Länder>
+        <Land>
+            <ISO>DE</ISO>
+            <Name>Deutschland</Name>
+        </Land>
+        <Land>
+            <ISO>TR</ISO>
+            <Name>Türkei</Name>
+        </Land>
+    </Länder>
+</Ferienwohnungsvermittlungsagentur>
