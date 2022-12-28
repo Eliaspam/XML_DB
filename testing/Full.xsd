@@ -1,6 +1,8 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:test="http://example.com/Quatsch"
            targetNamespace="http://example.com/Quatsch">
+    <xs:import/>
 
     <!-- This is the full DB -->
     <xs:element name="Ferienwohnungsvermittlungsagentur">
@@ -51,22 +53,10 @@
             </xs:sequence>
         </xs:complexType>
         <!-- References -->
-        <xs:keyref name="Kunde" refer="KundenNr">
-            <xs:selector xpath="Belegungen/Belegung"/>
-            <xs:field xpath="KundenNr"/>
-        </xs:keyref>
-        <xs:keyref name="Wohnung" refer="WohnungsNr">
-            <xs:selector xpath="Belegungen/Belegung"/>
-            <xs:field xpath="WohnungsNr"/>
-        </xs:keyref>
-        <xs:keyref name="Belegung" refer="BelegungsNr">
-            <xs:selector xpath="Rechnungen/Rechnung"/>
-            <xs:field xpath="BelegungsNr"/>
-        </xs:keyref>
     </xs:element>
 
     <!-- Complex types -->
-    <xs:complexType name="kundenType">
+    <xs:complexType name="Kunden">
         <xs:sequence>
             <!-- The Kunden Element holds unlimited 'Kunde' elements -->
             <xs:element name="Kunde" type="test:kundeType" minOccurs="0" maxOccurs="unbounded"/>
@@ -150,9 +140,9 @@
         </xs:sequence>
         <xs:attribute name="Art" use="required">
             <xs:simpleType>
-                <xs:restriction base="xs:token">
-                    <xs:enumeration value="Rechnung"/>
-                    <xs:enumeration value="Belegung"/>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Reservierung"/>
+                    <xs:enumeration value="Buchungen"/>
                 </xs:restriction>
             </xs:simpleType>
         </xs:attribute>

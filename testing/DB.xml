@@ -404,5 +404,17 @@
         <Land ISO="TR">
             <Name>Türkei</Name>
         </Land>
+        <Land ISO="CH">
+            <Name>Schweiz</Name>
+        </Land>
+        <Land ISO="FR">
+            <Name>Frankreich</Name>
+        </Land>
+        <Land ISO="ES">
+            <Name>Spanien</Name>
+        </Land>
+        <Land ISO="GL">
+            <Name>Grönland</Name>
+        </Land>
     </Länder>
 </Qua:Ferienwohnungsvermittlungsagentur>
