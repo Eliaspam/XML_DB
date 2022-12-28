@@ -7,7 +7,7 @@
 
     <!-- TODO: Think about container named Stammdaten -->
     <Kunden>
-        <Kunde ID="1">
+        <Kunde ID="1">å
             <Name>Karl</Name>
             <Vorname>Napf</Vorname>
             <Geburtsdatum>1960-01-01</Geburtsdatum>
