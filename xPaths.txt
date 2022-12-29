@@ -1,5 +1,27 @@
+1) XPath 3.1
+//Belegung[WohnungsNr = 1]
+
+2) XPath 3.1
+//Rechnung[BelegungsNr = //Belegung[WohnungsNr = 4]/@ID]
+
+3) XPath 3.1
+//Kunde[@ID = //Belegung[@Art = "Reservierung" and WohnungsNr = 1]/KundenNr]
+
+4) XPath 3.1
+for $Kunde in //Kunde
+return (
+if ($Kunde/Name = "Meier")
+then ($Kunde, count(//Belegungen/Belegung[@Art ="Buchung" and KundenNr = $Kunde/@ID]/@ID))
+else()
+)
 
 7) a) //Belegungen/Belegung[WohnungsNr=//Ferienwohnungen/Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adresse/Land="Frankreich" ]/@ID and @Art="Buchung"]/WohnungsNr
    b) //Belegungen/Belegung[WohnungsNr =//Ferienwohnungen/Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adresse/Land="Frankreich" ]/@ID and @Art="Reservierung"]/WohnungsNr
 8) a) //Ferienwohnungen/Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adresse/Land="Frankreich" and @ID != //Belegungen/Belegung[@Art="Buchung"  and WohnungsNr= //Ferienwohnungen/Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adresse/Land="Frankreich"]/@ID]/WohnungsNr]
    b) //Ferienwohnungen/Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adresse/Land="Frankreich" and @ID != //Belegungen/Belegung[@Art="Reservierung"  and WohnungsNr= //Ferienwohnungen/Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adresse/Land="Frankreich"]/@ID]/WohnungsNr]
+
+13) XPath 3.1
+    for $Name in //Länder/Land/Name
+    return (
+    concat($Name, ": ", count(//Belegungen/Belegung[WohnungsNr = //Wohnung[Adresse/Land = $Name]/@ID]))
+    )

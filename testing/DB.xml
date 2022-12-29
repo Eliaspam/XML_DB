@@ -1,9 +1,5 @@
 <?xml version="1.1" encoding="UTF-8"?>
-
-<Qua:Ferienwohnungsvermittlungsagentur
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://example.com/Quatsch Full.xsd"
-        xmlns:Qua="http://example.com/Quatsch">
+<test:Ferienwohnungsvermittlungsagentur xmlns:test="http://example.com/Quatsch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.com/Quatsch file:///Z:/Full.xsd">
 
     <!-- TODO: Think about container named Stammdaten -->
     <Kunden>
@@ -138,7 +134,7 @@
             </Bilder>
             <Beschreibung>Finka</Beschreibung>
             <Adresse>
-                <Land>TR</Land>
+                <Land>Türkei</Land>
                 <Ort>Öludeniz</Ort>
                 <PLZ>2349</PLZ>
                 <Straße>Highway 5</Straße>
@@ -294,8 +290,8 @@
             <ZimmerAnzahl>4</ZimmerAnzahl>
             <Beschreibung>Ferienhaus am Strand</Beschreibung>
             <Adresse>
-                <Land>Barcelona</Land>
-                <Ort>Spanien</Ort>
+                <Land>Spanien</Land>
+                <Ort>Barcelona</Ort>
                 <PLZ>5221</PLZ>
                 <Straße>Calle del torro 821</Straße>
             </Adresse>
@@ -318,15 +314,15 @@
     </Ferienwohnungen>
     <Belegungen>
         <Belegung Art="Buchung" ID="1">
-            <KundenNr>4</KundenNr>
-            <WohnungsNr>2</WohnungsNr>
+            <KundenNr>2</KundenNr>
+            <WohnungsNr>4</WohnungsNr>
             <von>2016-03-11</von>
             <bis>2016-05-11</bis>
             <Belegungsdatum>2016-02-12</Belegungsdatum>
         </Belegung>
         <Belegung Art="Reservierung" ID="2">
             <KundenNr>2</KundenNr>
-            <WohnungsNr>4</WohnungsNr>
+            <WohnungsNr>5</WohnungsNr>
             <von>2016-05-11</von>
             <bis>2016-05-17</bis>
             <Belegungsdatum>2016-03-02</Belegungsdatum>
@@ -420,4 +416,4 @@
             <Name>Grönland</Name>
         </Land>
     </Länder>
-</Qua:Ferienwohnungsvermittlungsagentur>
+</test:Ferienwohnungsvermittlungsagentur>

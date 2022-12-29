@@ -25,12 +25,12 @@
                         <xs:selector xpath="Belegung"/>
                         <xs:field xpath="@ID"/>
                     </xs:key>
-                    <xs:keyref name="Kunde" refer="KundenNr">
-                        <xs:selector xpath="Belegung"/>
+                    <xs:keyref name="Kunde" refer="test:KundenNr">
+                        <xs:selector xpath="Belegungen/Belegung"/>
                         <xs:field xpath="KundenNr"/>
                     </xs:keyref>
-                    <xs:keyref name="Wohnung" refer="WohnungsNr">
-                        <xs:selector xpath="Belegung"/>
+                    <xs:keyref name="Wohnung" refer="test:WohnungsNr">
+                        <xs:selector xpath="Belegungen/Belegung"/>
                         <xs:field xpath="WohnungsNr"/>
                     </xs:keyref>
                 </xs:element>
@@ -39,7 +39,7 @@
                         <xs:selector xpath="Rechnung"/>
                         <xs:field xpath="@ID"/>
                     </xs:key>
-                    <xs:keyref name="Belegung" refer="BelegungsNr">
+                    <xs:keyref name="Belegung" refer="test:BelegungsNr">
                         <xs:selector xpath="Rechnungen/Rechnung"/>
                         <xs:field xpath="BelegungsNr"/>
                     </xs:keyref>
