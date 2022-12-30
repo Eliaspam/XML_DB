@@ -1,0 +1,189 @@
+<!DOCTYPE ÜbersichtKunden SYSTEM "/home/knime356/Documents/HTWG/DBIS-2/XML_DB/Reports/Ex5a.dtd">
+<ÜbersichtKunden>
+    <Kunde>
+        <KundenInfo>
+            <KundenNr>1</KundenNr>
+            <Vorname>Karl</Vorname>
+            <Nachname>Napf</Nachname>
+            <Geburtsdatum>1960-01-01</Geburtsdatum>
+            <Ort>Konstanz</Ort>
+            <Landname>Deutschland</Landname>
+        </KundenInfo>
+        <Buchungen>
+            <Buchung Datum="2016-02-01">
+                <BuchungsNr>7</BuchungsNr>
+                <von>2016-05-07</von>
+                <bis>2016-05-08</bis>
+                <Ferienwohnung>
+                    <FerienwohnungsNr>2</FerienwohnungsNr>
+                    <Beschreibung>Ferienwohnung mit Seeblick</Beschreibung>
+                    <Größe>45</Größe>
+                    <Zimmerzahl>2</Zimmerzahl>
+                </Ferienwohnung>
+            </Buchung>
+        </Buchungen>
+    </Kunde>
+    <Kunde>
+        <KundenInfo>
+            <KundenNr>2</KundenNr>
+            <Vorname>Hans</Vorname>
+            <Nachname>Meier</Nachname>
+            <Geburtsdatum>1975-01-02</Geburtsdatum>
+            <Ort>Heidelberg</Ort>
+            <Landname>Deutschland</Landname>
+        </KundenInfo>
+        <Buchungen>
+            <Buchung Datum="2016-02-12">
+                <BuchungsNr>1</BuchungsNr>
+                <von>2016-03-11</von>
+                <bis>2016-03-13</bis>
+                <Ferienwohnung>
+                    <FerienwohnungsNr>4</FerienwohnungsNr>
+                    <Beschreibung>direkt am Meer</Beschreibung>
+                    <Größe>100</Größe>
+                    <Zimmerzahl>4</Zimmerzahl>
+                </Ferienwohnung>
+            </Buchung>
+        </Buchungen>
+        <Reservierungen>
+            <Reservierung Datum="2016-03-13">
+                <ReservierungsNr>2</ReservierungsNr>
+                <von>2016-05-11</von>
+                <bis>2016-05-17</bis>
+                <Ferienwohnung>
+                    <FerienwohnungsNr>5</FerienwohnungsNr>
+                    <Beschreibung>direkt am Park</Beschreibung>
+                    <Größe>110</Größe>
+                    <Zimmerzahl>3</Zimmerzahl>
+                </Ferienwohnung>
+            </Reservierung>
+            <Reservierung Datum="2016-02-14">
+                <ReservierungsNr>5</ReservierungsNr>
+                <von>2016-04-28</von>
+                <bis>2016-05-02</bis>
+                <Ferienwohnung>
+                    <FerienwohnungsNr>10</FerienwohnungsNr>
+                    <Beschreibung>Ferienhaus am Strand</Beschreibung>
+                    <Größe>100</Größe>
+                    <Zimmerzahl>4</Zimmerzahl>
+                </Ferienwohnung>
+            </Reservierung>
+        </Reservierungen>
+    </Kunde>
+    <Kunde>
+        <KundenInfo>
+            <KundenNr>3</KundenNr>
+            <Vorname>Franz</Vorname>
+            <Nachname>Huber</Nachname>
+            <Geburtsdatum>1980-01-03</Geburtsdatum>
+            <Ort>Stuttgart</Ort>
+            <Landname>Deutschland</Landname>
+        </KundenInfo>
+        <Buchungen>
+            <Buchung Datum="2016-02-18">
+                <BuchungsNr>6</BuchungsNr>
+                <von>2016-05-04</von>
+                <bis>2016-05-22</bis>
+                <Ferienwohnung>
+                    <FerienwohnungsNr>8</FerienwohnungsNr>
+                    <Beschreibung>zweigeschoessiges Haus</Beschreibung>
+                    <Größe>200</Größe>
+                    <Zimmerzahl>12</Zimmerzahl>
+                </Ferienwohnung>
+            </Buchung>
+        </Buchungen>
+        <Reservierungen>
+            <Reservierung Datum="2016-02-12">
+                <ReservierungsNr>3</ReservierungsNr>
+                <von>2016-04-03</von>
+                <bis>2016-04-23</bis>
+                <Ferienwohnung>
+                    <FerienwohnungsNr>5</FerienwohnungsNr>
+                    <Beschreibung>direkt am Park</Beschreibung>
+                    <Größe>110</Größe>
+                    <Zimmerzahl>3</Zimmerzahl>
+                </Ferienwohnung>
+            </Reservierung>
+        </Reservierungen>
+    </Kunde>
+    <Kunde>
+        <KundenInfo>
+            <KundenNr>4</KundenNr>
+            <Vorname>Klaus</Vorname>
+            <Nachname>Eber</Nachname>
+            <Geburtsdatum>1985-01-04</Geburtsdatum>
+            <Ort>Bern</Ort>
+            <Landname>Schweiz</Landname>
+        </KundenInfo>
+        <Buchungen>
+            <Buchung Datum="2016-02-09">
+                <BuchungsNr>4</BuchungsNr>
+                <von>2016-07-04</von>
+                <bis>2016-07-05</bis>
+                <Ferienwohnung>
+                    <FerienwohnungsNr>6</FerienwohnungsNr>
+                    <Beschreibung>mit Blick auf Eiffelturm</Beschreibung>
+                    <Größe>70</Größe>
+                    <Zimmerzahl>2</Zimmerzahl>
+                </Ferienwohnung>
+            </Buchung>
+        </Buchungen>
+        <Reservierungen>
+            <Reservierung Datum="2016-02-10">
+                <ReservierungsNr>10</ReservierungsNr>
+                <von>2016-05-01</von>
+                <bis>2016-05-24</bis>
+                <Ferienwohnung>
+                    <FerienwohnungsNr>1</FerienwohnungsNr>
+                    <Beschreibung>Finka</Beschreibung>
+                    <Größe>200</Größe>
+                    <Zimmerzahl>6</Zimmerzahl>
+                </Ferienwohnung>
+            </Reservierung>
+        </Reservierungen>
+    </Kunde>
+    <Kunde>
+        <KundenInfo>
+            <KundenNr>5</KundenNr>
+            <Vorname>Egon</Vorname>
+            <Nachname>Meier</Nachname>
+            <Geburtsdatum>1990-01-05</Geburtsdatum>
+            <Ort>Zürich</Ort>
+            <Landname>Schweiz</Landname>
+        </KundenInfo>
+        <Buchungen>
+            <Buchung Datum="2016-02-11">
+                <BuchungsNr>8</BuchungsNr>
+                <von>2016-05-22</von>
+                <bis>2016-05-28</bis>
+                <Ferienwohnung>
+                    <FerienwohnungsNr>9</FerienwohnungsNr>
+                    <Beschreibung>Topvilla am Strand</Beschreibung>
+                    <Größe>111</Größe>
+                    <Zimmerzahl>5</Zimmerzahl>
+                </Ferienwohnung>
+            </Buchung>
+            <Buchung Datum="2016-02-07">
+                <BuchungsNr>9</BuchungsNr>
+                <von>2016-07-03</von>
+                <bis>2016-07-07</bis>
+                <Ferienwohnung>
+                    <FerienwohnungsNr>10</FerienwohnungsNr>
+                    <Beschreibung>Ferienhaus am Strand</Beschreibung>
+                    <Größe>100</Größe>
+                    <Zimmerzahl>4</Zimmerzahl>
+                </Ferienwohnung>
+            </Buchung>
+        </Buchungen>
+    </Kunde>
+    <Kunde>
+        <KundenInfo>
+            <KundenNr>6</KundenNr>
+            <Vorname>Jim</Vorname>
+            <Nachname>Knopf</Nachname>
+            <Geburtsdatum>1995-01-06</Geburtsdatum>
+            <Ort>Konstanz</Ort>
+            <Landname>Deutschland</Landname>
+        </KundenInfo>
+    </Kunde>
+</ÜbersichtKunden>

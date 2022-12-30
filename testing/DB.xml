@@ -63,7 +63,7 @@
         <Kunde ID="4">
             <Name>Eber</Name>
             <Vorname>Klaus</Vorname>
-            <Geburtsdatum>1985-01-06</Geburtsdatum>
+            <Geburtsdatum>1985-01-04</Geburtsdatum>
             <Adresse>
                 <Land>Schweiz</Land>
                 <Ort>Bern</Ort>

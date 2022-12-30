@@ -1,0 +1,34 @@
+<!ELEMENT ÜbersichtKunden (Kunde*)>
+        <!ELEMENT Kunde (KundenInfo, Buchungen?, Reservierungen?)>
+        <!ELEMENT KundenInfo (KundenNr, Vorname, Nachname, Geburtsdatum, Ort, Landname)>
+        <!ELEMENT KundenNr (#PCDATA)>
+        <!ELEMENT Vorname (#PCDATA)>
+        <!ELEMENT Nachname (#PCDATA)>
+        <!ELEMENT Geburtsdatum (#PCDATA)>
+        <!ELEMENT Ort (#PCDATA)>
+        <!ELEMENT Landname (#PCDATA)>
+
+        <!ELEMENT Buchungen (Buchung+)>
+        <!ELEMENT Buchung (BuchungsNr, von, bis, Ferienwohnung, Rechnung?)>
+        <!ATTLIST Buchung Datum CDATA #REQUIRED>
+        <!ELEMENT BuchungsNr (#PCDATA)>
+        <!ELEMENT von (#PCDATA)>
+        <!ELEMENT bis (#PCDATA)>
+
+        <!ELEMENT Reservierungen (Reservierung+)>
+        <!ELEMENT Reservierung (ReservierungsNr, von, bis, Ferienwohnung)>
+        <!ATTLIST Reservierung Datum CDATA #REQUIRED>
+        <!ELEMENT ReservierungsNr (#PCDATA)>
+
+        <!ELEMENT Ferienwohnung (FerienwohnungsNr, Beschreibung, Größe, Zimmerzahl, Zusatzausstattung*)>
+        <!ELEMENT FerienwohnungsNr (#PCDATA)>
+        <!ELEMENT Beschreibung (#PCDATA)>
+        <!ELEMENT Größe (#PCDATA)>
+        <!ELEMENT Zimmerzahl (#PCDATA)>
+        <!ELEMENT Zusatzausstattung (#PCDATA)>
+
+        <!ELEMENT Rechnung (RechnungsNr, Betrag, Zahlungseingang?)>
+        <!ATTLIST Rechnung Datum CDATA #REQUIRED>
+        <!ELEMENT RechnungsNr (#PCDATA)>
+        <!ELEMENT Betrag (#PCDATA)>
+        <!ELEMENT Zahlungseingang (#PCDATA)>
