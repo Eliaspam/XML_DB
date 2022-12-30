@@ -1,4 +1,4 @@
-<!DOCTYPE ÜbersichtKunden SYSTEM "/home/knime356/Documents/HTWG/DBIS-2/XML_DB/Reports/Ex5a.dtd">
+<!DOCTYPE ÜbersichtKunden SYSTEM "Ex5a.dtd">
 <ÜbersichtKunden>
     <Kunde>
         <KundenInfo>

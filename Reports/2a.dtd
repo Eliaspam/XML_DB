@@ -1,0 +1,32 @@
+<!ELEMENT OffeneRechnungen (Rechnung*)>
+        <!ELEMENT Rechnung (RechnungsNr, Rechnungsdatum, Rechnungsbetrag, Buchung, Kunde)>
+        <!ELEMENT RechnungsNr (#PCDATA)>
+        <!ELEMENT Rechnungsdatum (#PCDATA)>
+        <!ELEMENT Rechnungsbetrag (#PCDATA)>
+
+        <!ELEMENT Buchung (BuchungsNr, von, bis, Ferienwohnung)>
+        <!ATTLIST Buchung Datum CDATA #REQUIRED>
+        <!ELEMENT BuchungsNr (#PCDATA)>
+        <!ELEMENT von (#PCDATA)>
+        <!ELEMENT bis (#PCDATA)>
+
+        <!ELEMENT Ferienwohnung (FerienwohnungsNr, Beschreibung)>
+        <!ELEMENT FerienwohnungsNr (#PCDATA)>
+        <!ELEMENT Beschreibung (#PCDATA)>
+
+        <!ELEMENT Kunde (KundenNr, Vorname, Nachname, Email, Telefon, Adresse, Bankverbindung)>
+        <!ELEMENT KundenNr (#PCDATA)>
+        <!ELEMENT Vorname (#PCDATA)>
+        <!ELEMENT Nachname (#PCDATA)>
+        <!ELEMENT Email (#PCDATA)>
+        <!ELEMENT Telefon (#PCDATA)>
+
+        <!ELEMENT Adresse (Straße, PLZ, Ort, Land)>
+        <!ELEMENT Straße (#PCDATA)>
+        <!ELEMENT PLZ (#PCDATA)>
+        <!ELEMENT Ort (#PCDATA)>
+        <!ELEMENT Land (#PCDATA)>
+
+        <!ELEMENT Bankverbindung (IBAN, BIC)>
+        <!ELEMENT IBAN (#PCDATA)>
+        <!ELEMENT BIC (#PCDATA)>

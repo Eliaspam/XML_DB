@@ -1,0 +1,34 @@
+<!DOCTYPE OffeneRechnungen SYSTEM "2a.dtd">
+<OffeneRechnungen>
+    <Rechnung>
+        <RechnungsNr>2</RechnungsNr>
+        <Rechnungsdatum>2016-02-26</Rechnungsdatum>
+        <Rechnungsbetrag>549</Rechnungsbetrag>
+        <Buchung Datum="2016-02-09">
+            <BuchungsNr>4</BuchungsNr>
+            <von>2016-07-04</von>
+            <bis>2016-07-05</bis>
+            <Ferienwohnung>
+                <FerienwohnungsNr>6</FerienwohnungsNr>
+                <Beschreibung>mit Blick auf Eiffelturm</Beschreibung>
+            </Ferienwohnung>
+        </Buchung>
+        <Kunde>
+            <KundenNr>4</KundenNr>
+            <Vorname>Klaus</Vorname>
+            <Nachname>Eber</Nachname>
+            <Email>eber@bluewin.ch</Email>
+            <Telefon>+41-171-9864785</Telefon>
+            <Adresse>
+                <Straße>Alpenstraße 11</Straße>
+                <PLZ>3001</PLZ>
+                <Ort>Bern</Ort>
+                <Land>Schweiz</Land>
+            </Adresse>
+            <Bankverbindung>
+                <IBAN>CH85692717230008792978</IBAN>
+                <BIC>MEMECH88XXX</BIC>
+            </Bankverbindung>
+        </Kunde>
+    </Rechnung>
+</OffeneRechnungen>
