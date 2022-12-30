@@ -43,6 +43,10 @@
                     <Größe>100</Größe>
                     <Zimmerzahl>4</Zimmerzahl>
                 </Ferienwohnung>
+                <Rechnung Datum="2016-03-15">
+                    <RechnungsNr>1</RechnungsNr>
+                    <Betrag>498</Betrag>
+                </Rechnung>
             </Buchung>
         </Buchungen>
         <Reservierungen>
@@ -126,6 +130,10 @@
                     <Größe>70</Größe>
                     <Zimmerzahl>2</Zimmerzahl>
                 </Ferienwohnung>
+                <Rechnung Datum="2016-02-26">
+                    <RechnungsNr>2</RechnungsNr>
+                    <Betrag>549</Betrag>
+                </Rechnung>
             </Buchung>
         </Buchungen>
         <Reservierungen>
