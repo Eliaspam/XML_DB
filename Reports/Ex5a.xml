@@ -1,3 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Report_5.1_XML.xsl"?>
+
 <!DOCTYPE ÜbersichtKunden SYSTEM "Ex5a.dtd">
 <ÜbersichtKunden>
     <Kunde>
