@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="Report_5.1_XML.xsl"?>
-<test:Ferienwohnungsvermittlungsagentur xmlns:test="http://example.com/Quatsch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.com/Quatsch file:///Z:/Full.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet href="Report_5.1_HTML.xsl" type="text/xsl"?>
 
-    <!-- TODO: Think about container named Stammdaten -->
+<test:Ferienwohnungsvermittlungsagentur
+        xmlns:test="http://example.com/Quatsch"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://example.com/Quatsch ./Report-DB.xsd">
+
     <Kunden>
         <Kunde ID="1">
             <Name>Karl</Name>
@@ -389,12 +392,12 @@
         <Rechnung ID="1">
             <BelegungsNr>1</BelegungsNr>
             <Betrag>498</Betrag>
-            <Belegungsdatum>2016-02-12</Belegungsdatum>
+            <Rechnungsdatum>2016-02-12</Rechnungsdatum>
         </Rechnung>
         <Rechnung ID="2">
             <BelegungsNr>4</BelegungsNr>
             <Betrag>549</Betrag>
-            <Belegungsdatum>2016-09-02</Belegungsdatum>
+            <Rechnungsdatum>2016-09-02</Rechnungsdatum>
         </Rechnung>
     </Rechnungen>
     <Länder>
