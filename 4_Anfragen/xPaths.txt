@@ -1,33 +1,26 @@
-1) XPath 3.1
-//Belegung[WohnungsNr = 1]
+1) //Belegung[WohnungsNr = 1]
 
-2) XPath 3.1
-//Rechnung[BelegungsNr = //Belegung[WohnungsNr = 4]/@ID]
+2) //Rechnung[BelegungsNr = //Belegung[WohnungsNr = 4]/@ID]
 
-3) XPath 3.1
-//Kunde[@ID = //Belegung[@Art = "Reservierung" and WohnungsNr = 1]/KundenNr]
+3) //Kunde[@ID = //Belegung[@Art = "Reservierung" and WohnungsNr = 1]/KundenNr]
 
-4) XPath 3.1
-count(//Belegung[@Art ="Reservierung" and KundenNr = 1])
+4) count(//Belegung[@Art ="Reservierung" and KundenNr = 1])
 
-5) Xpath 3.1
-//Belegung[@Art = "Buchung" and KundenNr = //Kunde[Name = "Meier"]/@ID]
+5) //Belegung[@Art = "Buchung" and KundenNr = //Kunde[Name = "Meier"]/@ID]
 
-6) XPath 3.1
-for $Kunde in //Kunde
+6) for $Kunde in //Kunde
     return (
         if ($Kunde/Name = "Meier")
             then ($Kunde, count(//Belegungen/Belegung[@Art ="Buchung" and KundenNr = $Kunde/@ID]/@ID))
             else()
-)
 
 7) a) //Belegungen/Belegung[WohnungsNr=//Ferienwohnungen/Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adresse/Land="Frankreich" ]/@ID and @Art="Buchung"]/WohnungsNr
    b) //Belegungen/Belegung[WohnungsNr =//Ferienwohnungen/Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adresse/Land="Frankreich" ]/@ID and @Art="Reservierung"]/WohnungsNr
+
 8) a) //Ferienwohnungen/Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adresse/Land="Frankreich" and @ID != //Belegungen/Belegung[@Art="Buchung"  and WohnungsNr= //Ferienwohnungen/Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adresse/Land="Frankreich"]/@ID]/WohnungsNr]
    b) //Ferienwohnungen/Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adresse/Land="Frankreich" and @ID != //Belegungen/Belegung[@Art="Reservierung"  and WohnungsNr= //Ferienwohnungen/Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adresse/Land="Frankreich"]/@ID]/WohnungsNr]
 
-9) XPath 3.1
-let $Wohnungen := (//Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adresse/Land="Türkei"])
+9) let $Wohnungen := (//Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adresse/Land="Türkei"])
     return (
         let $Belegungen := (//Belegung[not(von > xs:date("2016-05-21") or bis < xs:date("2016-05-01"))])
             return (
@@ -35,8 +28,7 @@ let $Wohnungen := (//Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adress
             )
     )
 
-10) XPath 3.1
-let $Wohnungen := (//Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adresse/Land="Türkei"])
+10) let $Wohnungen := (//Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adresse/Land="Türkei"])
     return (
         let $Belegungen := (//Belegung[not(von > xs:date("2016-05-21") or bis < xs:date("2016-05-01"))])
             return (
@@ -44,49 +36,44 @@ let $Wohnungen := (//Wohnung[Zusatzaustattung/Austattung="Schwimmbad" and Adress
             )
     )
 
-11) XPath 3.1
-//Kunde[@ID = //Belegungen/Belegung/KundenNr]
+11) //Kunde[@ID = //Belegungen/Belegung/KundenNr]
 
-12) Xpath 3.1
-//Kunde[not(@ID = //Belegungen/Belegung/KundenNr)]
+12) //Kunde[not(@ID = //Belegungen/Belegung/KundenNr)]
 
-13) XPath 3.1
-for $Name in //Länder/Land/Name
+13) for $Name in //Länder/Land/Name
+        return (
+            concat($Name, ": ", count(//Belegungen/Belegung[WohnungsNr = //Wohnung[Adresse/Land = $Name]/@ID]))
+        )
+
+14) let $anzahlFewoDE := count(//Wohnung[Adresse/Land = "Deutschland"])
     return (
-    concat($Name, ": ", count(//Belegungen/Belegung[WohnungsNr = //Wohnung[Adresse/Land = $Name]/@ID]))
+	    let $fewoFrankreich := //Wohnung[Adresse/Land = "Frankreich"]
+	    return (
+		    for $Wohnung in $fewoFrankreich
+			    return(
+				    if(count(//Belegung[WohnungsNr = $Wohnung/@ID]) > $anzahlFewoDE)
+					    then ($Wohnung) else ()
+			    )
+	    )
     )
 
-14) XPath 3.1
-let $anzahlFewoDE := count(//Wohnung[Adresse/Land = "Deutschland"])
-return (
-	let $fewoFrankreich := //Wohnung[Adresse/Land = "Frankreich"]
-	return (
-		for $Wohnung in $fewoFrankreich
-			return(
-				if(count(//Belegung[WohnungsNr = $Wohnung/@ID]) > $anzahlFewoDE)
-					then ($Wohnung) else ()
-			)
-	)
-)
+15) max(//Wohnung/@ID)
 
-15)
-max(//Wohnung/@ID)
+16) avg(//Wohnung[Adresse/Land = "Frankreich"]/Größe)
 
-16)
-avg(//Wohnung[Adresse/Land = "Frankreich"]/Größe)
-
-17)
-let $kunde := //Kunde[@ID=2]
-return (
-	let $rechnungen := //Rechnung[ BelegungsNr=//Belegung[KundenNr=$kunde/@ID]/@ID]
-	return(
-		sum($rechnungen/Betrag)
-		)
-)
+17) let $kunde := //Kunde[@ID=2]
+    return (
+	    let $rechnungen := //Rechnung[ BelegungsNr=//Belegung[KundenNr=$kunde/@ID]/@ID]
+	    return(
+		    sum($rechnungen/Betrag)
+		    )
+    )
 
 18) Wert der einzelnen Buchungen
-let $Buchungen := //Belegung[@Art="Buchung"]
-return(
-	for $Buchung in $Buchungen
-	return (concat( "Buchung ID:", $Buchung/@ID, " Wert: ", days-from-duration($Buchung/bis - $Buchung/von) * //Wohnung[@ID= $Buchung/WohnungsNr]/Preis  ,"€" ) )
-)
+    let $Buchungen := //Belegung[@Art="Buchung"]
+    return(
+	    for $Buchung in $Buchungen
+	        return (
+	        concat( "Buchung ID:", $Buchung/@ID, " Wert: ", days-from-duration($Buchung/bis - $Buchung/von) * //Wohnung[@ID= $Buchung/WohnungsNr]/Preis  ,"€" )
+	        )
+    )
