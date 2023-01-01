@@ -391,6 +391,7 @@
             <BelegungsNr>1</BelegungsNr>
             <Betrag>498</Betrag>
             <Rechnungsdatum>2016-02-12</Rechnungsdatum>
+            <Zahlungseingang>2016-03-18</Zahlungseingang>
         </Rechnung>
         <Rechnung ID="2">
             <BelegungsNr>4</BelegungsNr>
