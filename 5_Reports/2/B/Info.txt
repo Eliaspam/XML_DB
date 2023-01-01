@@ -1,0 +1,2 @@
+Browser: Firefox 108.01
+OS: macOs Ventura 13.1 (22C65)

@@ -4,7 +4,7 @@
 <test:Ferienwohnungsvermittlungsagentur
         xmlns:test="http://example.com/Quatsch"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://example.com/Quatsch ../../Report-DB.xsd">
+        xsi:schemaLocation="http://example.com/Quatsch /2_Datendefinition/Ferienwohnungsvermittlungsagentur.xsd">
 
     <Kunden>
         <Kunde ID="1">

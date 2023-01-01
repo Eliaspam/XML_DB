@@ -90,6 +90,3 @@ return(
 	for $Buchung in $Buchungen
 	return (concat( "Buchung ID:", $Buchung/@ID, " Wert: ", days-from-duration($Buchung/bis - $Buchung/von) * //Wohnung[@ID= $Buchung/WohnungsNr]/Preis  ,"€" ) )
 )
-
-
-//

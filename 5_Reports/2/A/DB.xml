@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<?xml-stylesheet href="Report_5.1_XML.xsl" type="text/xsl"?>
+<?xml-stylesheet href="Uebersicht_Kunden_HTML.xsl" type="text/xsl"?>
 
 <test:Ferienwohnungsvermittlungsagentur
         xmlns:test="http://example.com/Quatsch"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://example.com/Quatsch ./Report-DB.xsd">
+        xsi:schemaLocation="http://example.com/Quatsch /2_Datendefinition/Ferienwohnungsvermittlungsagentur.xsd">
 
     <Kunden>
         <Kunde ID="1">

@@ -1,4 +1,5 @@
-<!DOCTYPE OffeneRechnungen SYSTEM "2a.dtd">
+<!DOCTYPE OffeneRechnungen SYSTEM
+        "/Users/eliaspampuch/Study/Semester_4/DBIS_2/XML_Project/5_Reports/2/A/Offene_Rechnungen.dtd">
 <OffeneRechnungen>
     <Rechnung>
         <RechnungsNr>2</RechnungsNr>
