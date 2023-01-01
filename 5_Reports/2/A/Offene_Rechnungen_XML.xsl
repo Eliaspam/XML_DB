@@ -2,7 +2,7 @@
     <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
     <xsl:template match="/">
         <OffeneRechnungen>
-            <xsl:for-each select="//Rechnung"/>
+            <xsl:for-each select="//Rechnung">
             <xsl:if test="not (Zahlungseingang)">
                 <Rechnung>
                     <RechnungsNr>
@@ -19,7 +19,7 @@
                     <xsl:variable name="Buchung" select="//Belegung[@ID = $BelegungsNr]"/>
                     <Buchung>
                         <xsl:attribute name="Datum">
-                            <xsl:value-of select="$Buchung/Buchungsdatum"/>
+                            <xsl:value-of select="$Buchung/Belegungsdatum"/>
                         </xsl:attribute>
                         <BuchungsNr>
                             <xsl:value-of select="$Buchung/@ID"/>
@@ -84,6 +84,7 @@
 
                 </Rechnung>
             </xsl:if>
+            </xsl:for-each>
         </OffeneRechnungen>
     </xsl:template>
 </xsl:stylesheet>
