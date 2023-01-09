@@ -12,7 +12,7 @@
             <Vorname>Napf</Vorname>
             <Geburtsdatum>1960-01-01</Geburtsdatum>
             <Adresse>
-                <Land>Deutschland</Land>
+                <Land>DE</Land>
                 <Ort>Konstanz</Ort>
                 <PLZ>78467</PLZ>
                 <Straße>Reutestraße 104</Straße>
@@ -22,7 +22,7 @@
             <Bankverbindung>
                 <IBAN>DE85692717230007823212</IBAN>
                 <Kontonummer>7823212</Kontonummer>
-                <Bankleitzahl>69271723</Bankleitzahl>
+                <BLZ>69271723</BLZ>
                 <BIC>KARSDE66XXX</BIC>
             </Bankverbindung>
         </Kunde>
@@ -31,7 +31,7 @@
             <Vorname>Hans</Vorname>
             <Geburtsdatum>1975-01-02</Geburtsdatum>
             <Adresse>
-                <Land>Deutschland</Land>
+                <Land>DE</Land>
                 <Ort>Heidelberg</Ort>
                 <PLZ>69115</PLZ>
                 <Straße>Hauptstraße 12</Straße>
@@ -41,7 +41,7 @@
             <Bankverbindung>
                 <IBAN>DE83692717230008929368</IBAN>
                 <Kontonummer>7823212</Kontonummer>
-                <Bankleitzahl>32793968</Bankleitzahl>
+                <BLZ>32793968</BLZ>
                 <BIC>BARSDE77XXX</BIC>
             </Bankverbindung>
         </Kunde>
@@ -50,7 +50,7 @@
             <Vorname>Franz</Vorname>
             <Geburtsdatum>1980-01-03</Geburtsdatum>
             <Adresse>
-                <Land>Deutschland</Land>
+                <Land>DE</Land>
                 <Ort>Stuttgart</Ort>
                 <PLZ>70713</PLZ>
                 <Straße>Schlossstraße 54</Straße>
@@ -60,7 +60,7 @@
             <Bankverbindung>
                 <IBAN>DE85692717230001347291</IBAN>
                 <Kontonummer>1347291</Kontonummer>
-                <Bankleitzahl>69271723</Bankleitzahl>
+                <BLZ>69271723</BLZ>
                 <BIC>KARSDE66XXX</BIC>
             </Bankverbindung>
         </Kunde>
@@ -69,7 +69,7 @@
             <Vorname>Klaus</Vorname>
             <Geburtsdatum>1985-01-06</Geburtsdatum>
             <Adresse>
-                <Land>Schweiz</Land>
+                <Land>CH</Land>
                 <Ort>Bern</Ort>
                 <PLZ>3001</PLZ>
                 <Straße>Alpenstraße 11</Straße>
@@ -79,7 +79,7 @@
             <Bankverbindung>
                 <IBAN>CH85692717230008792978</IBAN>
                 <Kontonummer>8792978</Kontonummer>
-                <Bankleitzahl>29788431</Bankleitzahl>
+                <BLZ>29788431</BLZ>
                 <BIC>MEMECH88XXX</BIC>
             </Bankverbindung>
         </Kunde>
@@ -88,7 +88,7 @@
             <Vorname>Egon</Vorname>
             <Geburtsdatum>1990-01-05</Geburtsdatum>
             <Adresse>
-                <Land>Schweiz</Land>
+                <Land>CH</Land>
                 <Ort>Zürich</Ort>
                 <PLZ>8001</PLZ>
                 <Straße>Seeweg 23</Straße>
@@ -98,7 +98,7 @@
             <Bankverbindung>
                 <IBAN>CH85692717230009082780</IBAN>
                 <Kontonummer>9082780</Kontonummer>
-                <Bankleitzahl>87890271</Bankleitzahl>
+                <BLZ>87890271</BLZ>
                 <BIC>KONSCH12XXX</BIC>
             </Bankverbindung>
         </Kunde>
@@ -107,7 +107,7 @@
             <Vorname>Jim</Vorname>
             <Geburtsdatum>1995-01-06</Geburtsdatum>
             <Adresse>
-                <Land>Deutschland</Land>
+                <Land>DE</Land>
                 <Ort>Konstanz</Ort>
                 <PLZ>78462</PLZ>
                 <Straße>Rheingutstraße 14</Straße>
@@ -117,7 +117,7 @@
             <Bankverbindung>
                 <IBAN>DE85692717230007322890</IBAN>
                 <Kontonummer>7322890</Kontonummer>
-                <Bankleitzahl>69271723</Bankleitzahl>
+                <BLZ>69271723</BLZ>
                 <BIC>KARSDE66XXX</BIC>
             </Bankverbindung>
         </Kunde>
@@ -138,7 +138,7 @@
             </Bilder>
             <Beschreibung>Finka</Beschreibung>
             <Adresse>
-                <Land>Türkei</Land>
+                <Land>TR</Land>
                 <Ort>Öludeniz</Ort>
                 <PLZ>2349</PLZ>
                 <Straße>Highway 5</Straße>
@@ -164,7 +164,7 @@
             </Bilder>
             <Beschreibung>Ferienwohnung mit Seeblick</Beschreibung>
             <Adresse>
-                <Land>Deutschland</Land>
+                <Land>DE</Land>
                 <Ort>Konstanz</Ort>
                 <PLZ>78461</PLZ>
                 <Straße>Markgrafenstraße 33</Straße>
@@ -176,7 +176,7 @@
             <ZimmerAnzahl>3</ZimmerAnzahl>
             <Beschreibung>im Schnee</Beschreibung>
             <Adresse>
-                <Land>Schweiz</Land>
+                <Land>CH</Land>
                 <Ort>Chur</Ort>
                 <PLZ>2234</PLZ>
                 <Straße>Zur Piste 189</Straße>
@@ -191,7 +191,7 @@
             <ZimmerAnzahl>4</ZimmerAnzahl>
             <Beschreibung>direkt am Meer</Beschreibung>
             <Adresse>
-                <Land>Frankreich</Land>
+                <Land>FR</Land>
                 <Ort>Bordeaux</Ort>
                 <PLZ>8234</PLZ>
                 <Straße>rue Monsieur 980</Straße>
@@ -209,7 +209,7 @@
             </Bilder>
             <Beschreibung>direkt am Park</Beschreibung>
             <Adresse>
-                <Land>Frankreich</Land>
+                <Land>FR</Land>
                 <Ort>Disneyland</Ort>
                 <PLZ>8787</PLZ>
                 <Straße>rue de gaulle 22</Straße>
@@ -225,7 +225,7 @@
             <ZimmerAnzahl>2</ZimmerAnzahl>
             <Beschreibung>mit Blick auf Eiffelturm</Beschreibung>
             <Adresse>
-                <Land>Frankreich</Land>
+                <Land>FR</Land>
                 <Ort>Paris</Ort>
                 <PLZ>8792</PLZ>
                 <Straße>rue de la Maison Blanche 32</Straße>
@@ -240,7 +240,7 @@
             <ZimmerAnzahl>6</ZimmerAnzahl>
             <Beschreibung>Dachterrassewohnung zentral</Beschreibung>
             <Adresse>
-                <Land>Frankreich</Land>
+                <Land>FR</Land>
                 <Ort>Paris</Ort>
                 <PLZ>8792</PLZ>
                 <Straße>rue liberte 78</Straße>
@@ -261,7 +261,7 @@
             </Bilder>
             <Beschreibung>zweigeschoessiges Haus</Beschreibung>
             <Adresse>
-                <Land>Türkei</Land>
+                <Land>TR</Land>
                 <Ort>Antalya</Ort>
                 <PLZ>2321</PLZ>
                 <Straße>Strandweg 90</Straße>
@@ -278,7 +278,7 @@
             <ZimmerAnzahl>5</ZimmerAnzahl>
             <Beschreibung>Topvilla am Strand</Beschreibung>
             <Adresse>
-                <Land>Türkei</Land>
+                <Land>TR</Land>
                 <Ort>Antalya</Ort>
                 <PLZ>2321</PLZ>
                 <Straße>Strandweg 91</Straße>
@@ -294,7 +294,7 @@
             <ZimmerAnzahl>4</ZimmerAnzahl>
             <Beschreibung>Ferienhaus am Strand</Beschreibung>
             <Adresse>
-                <Land>Spanien</Land>
+                <Land>ES</Land>
                 <Ort>Barcelona</Ort>
                 <PLZ>5221</PLZ>
                 <Straße>Calle del torro 821</Straße>
@@ -306,7 +306,7 @@
             <ZimmerAnzahl>4</ZimmerAnzahl>
             <Beschreibung>Strandbungalow</Beschreibung>
             <Adresse>
-                <Land>Türkei</Land>
+                <Land>TR</Land>
                 <Ort>Antalya</Ort>
                 <PLZ>2321</PLZ>
                 <Straße>Strandweg 45</Straße>

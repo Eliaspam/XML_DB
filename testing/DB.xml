@@ -20,7 +20,7 @@
             <Bankverbindung>
                 <IBAN>DE85692717230007823212</IBAN>
                 <Kontonummer>7823212</Kontonummer>
-                <Bankleitzahl>69271723</Bankleitzahl>
+                <BLZ>69271723</BLZ>
                 <BIC>KARSDE66XXX</BIC>
             </Bankverbindung>
         </Kunde>
@@ -39,7 +39,7 @@
             <Bankverbindung>
                 <IBAN>DE83692717230008929368</IBAN>
                 <Kontonummer>7823212</Kontonummer>
-                <Bankleitzahl>32793968</Bankleitzahl>
+                <BLZ>32793968</BLZ>
                 <BIC>BARSDE77XXX</BIC>
             </Bankverbindung>
         </Kunde>
@@ -58,7 +58,7 @@
             <Bankverbindung>
                 <IBAN>DE85692717230001347291</IBAN>
                 <Kontonummer>1347291</Kontonummer>
-                <Bankleitzahl>69271723</Bankleitzahl>
+                <BLZ>69271723</BLZ>
                 <BIC>KARSDE66XXX</BIC>
             </Bankverbindung>
         </Kunde>
@@ -77,7 +77,7 @@
             <Bankverbindung>
                 <IBAN>CH85692717230008792978</IBAN>
                 <Kontonummer>8792978</Kontonummer>
-                <Bankleitzahl>29788431</Bankleitzahl>
+                <BLZ>29788431</BLZ>
                 <BIC>MEMECH88XXX</BIC>
             </Bankverbindung>
         </Kunde>
@@ -96,7 +96,7 @@
             <Bankverbindung>
                 <IBAN>CH85692717230009082780</IBAN>
                 <Kontonummer>9082780</Kontonummer>
-                <Bankleitzahl>87890271</Bankleitzahl>
+                <BLZ>87890271</BLZ>
                 <BIC>KONSCH12XXX</BIC>
             </Bankverbindung>
         </Kunde>
@@ -115,7 +115,7 @@
             <Bankverbindung>
                 <IBAN>DE85692717230007322890</IBAN>
                 <Kontonummer>7322890</Kontonummer>
-                <Bankleitzahl>69271723</Bankleitzahl>
+                <BLZ>69271723</BLZ>
                 <BIC>KARSDE66XXX</BIC>
             </Bankverbindung>
         </Kunde>

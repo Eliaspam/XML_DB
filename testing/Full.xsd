@@ -92,7 +92,7 @@
         <xs:sequence>
             <xs:element name="IBAN" type="xs:string"/>
             <xs:element name="Kontonummer" type="xs:string"/>
-            <xs:element name="Bankleitzahl" type="xs:string"/>
+            <xs:element name="BLZ" type="xs:string"/>
             <xs:element name="BIC" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
