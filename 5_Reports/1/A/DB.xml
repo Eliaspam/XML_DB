@@ -2,9 +2,9 @@
 <?xml-stylesheet href="Uebersicht_Kunden_XML.xsl" type="text/xsl"?>
 
 <test:Ferienwohnungsvermittlungsagentur
-        xmlns:test="http://example.com/Quatsch"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://example.com/Quatsch ../../../2_Datendefinition/Ferienwohnungsvermittlungsagentur.xsd">
+        xmlns:test="http://example.com/Quatsch"
+        xsi:schemaLocation="http://example.com/Quatsch ../2_Datendefinition/Ferienwohnungsvermittlungsagentur.xsd">
 
     <Kunden>
         <Kunde ID="1">
@@ -321,7 +321,7 @@
             <KundenNr>2</KundenNr>
             <WohnungsNr>4</WohnungsNr>
             <von>2016-03-11</von>
-            <bis>2016-03-13</bis>
+            <bis>2016-03-17</bis>
             <Belegungsdatum>2016-02-12</Belegungsdatum>
         </Belegung>
         <Belegung Art="Reservierung" ID="2">
@@ -392,7 +392,7 @@
         <Rechnung ID="1">
             <BelegungsNr>1</BelegungsNr>
             <Betrag>498</Betrag>
-            <Rechnungsdatum>2016-02-12</Rechnungsdatum>
+            <Rechnungsdatum>2016-03-13</Rechnungsdatum>
             <Zahlungseingang>2016-03-18</Zahlungseingang>
         </Rechnung>
         <Rechnung ID="2">

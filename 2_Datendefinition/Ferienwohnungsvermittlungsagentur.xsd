@@ -1,9 +1,10 @@
-<?xml version="1.1" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:test="http://example.com/Quatsch"
+           xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+           vc:minVersion="1.1"
            targetNamespace="http://example.com/Quatsch">
 
-    <!-- This is the full DB -->
+    <!--  This is the full DB  -->
     <xs:element name="Ferienwohnungsvermittlungsagentur">
         <xs:complexType>
             <xs:sequence>
@@ -14,8 +15,8 @@
                 <xs:element name="Länder" type="test:länderType"/>
             </xs:sequence>
         </xs:complexType>
-        <!-- Keys -->
-        <!-- Kunde -->
+        <!--  Keys  -->
+        <!--  Kunde  -->
         <xs:key name="KundenNr">
             <xs:selector xpath="Kunden/Kunde"/>
             <xs:field xpath="@ID"/>
@@ -24,7 +25,7 @@
             <xs:selector xpath="Kunden/Kunde"/>
             <xs:field xpath="Email"/>
         </xs:key>
-        <!-- Bankverbindung -->
+        <!--  Bankverbindung  -->
         <xs:key name="IBAN">
             <xs:selector xpath="Kunden/Kunde/Bankverbindung"/>
             <xs:field xpath="IBAN"/>
@@ -39,29 +40,28 @@
             <xs:field xpath="Kontonummer"/>
             <xs:field xpath="BLZ"/>
         </xs:key>
-        <!-- Wohnung -->
+        <!--  Wohnung  -->
         <xs:key name="WohnungsNr">
             <xs:selector xpath="Ferienwohnungen/Wohnung"/>
             <xs:field xpath="@ID"/>
         </xs:key>
-        <!-- Belegung -->
+        <!--  Belegung  -->
         <xs:key name="BelegungsNr">
             <xs:selector xpath="Belegungen/Belegung"/>
             <xs:field xpath="@ID"/>
         </xs:key>
-        <!-- Rechnung -->
+        <!--  Rechnung  -->
         <xs:key name="RechnungsNr">
             <xs:selector xpath="Rechnungen/Rechnung"/>
             <xs:field xpath="@ID"/>
         </xs:key>
-        <!-- Land -->
+        <!--  Land  -->
         <xs:key name="ISO">
             <xs:selector xpath="Länder/Land"/>
             <xs:field xpath="@ISO"/>
         </xs:key>
-
-        <!-- Keyrefs -->
-        <!-- Belegung -->
+        <!--  Keyrefs  -->
+        <!--  Belegung  -->
         <xs:keyref name="Kunde" refer="test:KundenNr">
             <xs:selector xpath="Belegungen/Belegung"/>
             <xs:field xpath="KundenNr"/>
@@ -70,7 +70,7 @@
             <xs:selector xpath="Belegungen/Belegung"/>
             <xs:field xpath="WohnungsNr"/>
         </xs:keyref>
-        <!-- Rechnung -->
+        <!--  Rechnung  -->
         <xs:keyref name="Belegung" refer="test:BelegungsNr">
             <xs:selector xpath="Rechnungen/Rechnung"/>
             <xs:field xpath="BelegungsNr"/>
@@ -85,10 +85,10 @@
         </xs:keyref>
     </xs:element>
 
-    <!-- Complex types -->
+    <!--  Complex types  -->
     <xs:complexType name="Kunden">
         <xs:sequence>
-            <!-- The Kunden Element holds unlimited 'Kunde' elements -->
+            <!--  The Kunden Element holds unlimited 'Kunde' elements  -->
             <xs:element name="Kunde" type="test:kundeType" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
@@ -104,7 +104,6 @@
         </xs:sequence>
         <xs:attribute name="ID" type="xs:int" use="required"/>
     </xs:complexType>
-    <!-- Todo: Adresse unique over whole document -->
     <xs:complexType name="adresseType">
         <xs:sequence>
             <xs:element name="Land" type="xs:string"/>
@@ -120,7 +119,6 @@
             <xs:element name="BLZ" type="xs:string"/>
             <xs:element name="BIC" type="xs:string"/>
         </xs:sequence>
-
     </xs:complexType>
     <xs:complexType name="wohnungenType">
         <xs:sequence>
@@ -175,23 +173,26 @@
     </xs:complexType>
     <xs:complexType name="belegungenType">
         <xs:sequence>
-            <xs:element name="Belegung" type="test:belegungType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Belegung" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="test:belegungType">
+                            <xs:assert test="(. = 'Reservierung' and $value = 'Belegung') or . = $value"/>
+                            <xs:assert test="bis gt von"/>
+                        </xs:extension>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
-    <!-- Todo: Reservierung to Buchung, but not Buchung to Reservierung -->
+    <!--  Todo: Reservierung to Buchung, but not Buchung to Reservierung  -->
     <xs:complexType name="belegungType">
         <xs:sequence>
-            <xs:element type="xs:int" name="KundenNr"/>
-            <xs:element type="xs:int" name="WohnungsNr"/>
-            <xs:element type="xs:date" name="von"/>
-            <xs:element name="bis">
-                <xs:simpleType>
-                    <xs:restriction base="xs:date">
-                        <xs:minExclusive value="xs:date(../von)"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element type="xs:date" name="Belegungsdatum"/>
+            <xs:element name="KundenNr" type="xs:int"/>
+            <xs:element name="WohnungsNr" type="xs:int"/>
+            <xs:element name="von" type="xs:date"/>
+            <xs:element name="bis" type="xs:date"/>
+            <xs:element name="Belegungsdatum" type="xs:date"/>
         </xs:sequence>
         <xs:attribute name="Art" use="required">
             <xs:simpleType>
