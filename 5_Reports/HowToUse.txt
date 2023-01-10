@@ -1,0 +1,4 @@
+Im XML wird das xslt (stylesheet) referenziert.
+Das XML muss man dann im Browser öffen, NICHT das xslt.
+
+HTML wird im Browser wie erwartet dargestellt, XML sieht man nur im Inspektor.
